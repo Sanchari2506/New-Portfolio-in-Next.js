@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { Mail, MapPin, Clock, Send, CheckCircle, Phone } from "lucide-react";
 
 type FormData = { name: string; email: string; budget: string; message: string };
 
@@ -48,13 +48,14 @@ export function Contact() {
             <p
               style={{ fontFamily: "'Inter', sans-serif", fontSize: "1rem", lineHeight: 1.75, color: "#7a7a85", marginBottom: "2rem" }}
             >
-              I'm currently taking on new Shopify projects — themes, custom apps, headless builds, and integrations.
+              I'm currently taking on new Shopify projects — themes, custom apps, B2B, agentic commerce and integrations.
               If you have a project in mind, I'd love to hear about it.
             </p>
 
             <div className="flex flex-col gap-5 mb-8">
               {[
                 { icon: Mail, label: "EMAIL", value: "sanchari.shopify@gmail.com" },
+                { icon: Phone, label: "PHONE", value: "+916290398828"},
                 { icon: MapPin, label: "LOCATION", value: "Kolkata, India — remote worldwide" }
               ].map(({ icon: Icon, label, value }) => (
                 <div key={label} className="flex items-start gap-4">
@@ -94,7 +95,8 @@ export function Contact() {
               {[
                 "Custom Shopify Theme Development",
                 "Shopify App Development",
-                "Headless Commerce (Hydrogen)",
+                "Agentic Commerce",
+                "B2B",
                 "Shopify Migrations & Audits",
                 "Third-party Integrations",
                 "Checkout Extension Development",
