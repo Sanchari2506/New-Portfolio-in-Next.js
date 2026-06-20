@@ -250,7 +250,7 @@ export function Hero() {
               {[
                 { number: "5+", label: "Years Experience", sub: "Shopify ecosystem" },
                 { number: "120+", label: "Projects Shipped", sub: "Stores & custom apps" },
-                { number: "$12M+", label: "Revenue Influenced", sub: "All types of Shopify projects" },
+                { number: "$20M+", label: "Revenue Influenced", sub: "All types of Shopify projects" },
                 { number: "4.9★", label: "Client Rating", sub: "For Shopify Development & Support" },
               ].map(({ number, label, sub }) => (
                 <div
