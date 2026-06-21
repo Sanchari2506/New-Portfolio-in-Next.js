@@ -5,85 +5,115 @@ import { GitHubIcon } from "./icons/SocialIcons";
 const projects = [
   {
     id: 1,
-    tag: "SHOPIFY THEME",
-    title: "Lumière Beauty",
+    tag: "SHOPIFY THEME REVAMP",
+    title: "Salty Accessories",
     description:
-      "Full custom OS2.0 theme for a luxury DTC beauty brand. Built modular sections, advanced filtering with predictive search, cart drawer with upsell logic, and subscription integration via ReCharge.",
-    image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&h=500&fit=crop&auto=format",
-    tech: ["Liquid", "SCSS", "Alpine.js", "ReCharge", "Klaviyo"],
+    "Complete Shopify OS 2.0 theme revamp for a premium fashion accessories brand. Developed custom sections, collection filtering, predictive search, cart drawer enhancements, mobile-first UI improvements, and performance optimizations to create a faster and more engaging shopping experience.",
+    image: "https://cdn.shopify.com/s/files/1/0719/1937/0434/files/salty-hero.png?v=1782058774",
+    tech: ["Liquid", "CSS", "Javascript", "Judgeme", "Klaviyo"],
     metrics: ["+38% conversion", "2.1s load time", "4.9★ client"],
-    color: "#95bf47",
-    liveUrl: "#",
-    codeUrl: "#",
+    color: "#c383fb",
+    liveUrl: "https://salty.co.in/"
   },
   {
     id: 2,
     tag: "SHOPIFY APP",
-    title: "BundleBuilder Pro",
+    title: "Glow Videos - Shoppable Video App",
     description:
-      "Custom Shopify app enabling merchants to create dynamic product bundles with conditional pricing. Polaris UI, GraphQL Admin API, Shopify Functions for discount logic, embedded in admin.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop&auto=format",
+      "Built a Shopify app that enables merchants to showcase shoppable videos across product pages, collections, and homepages. Developed the merchant dashboard using Polaris and React, integrated Shopify APIs, video management features, analytics tracking, and seamless product tagging for higher engagement and conversions.",
+    image: "https://cdn.shopify.com/s/files/1/0719/1937/0434/files/glow-videos.png?v=1782059947",
     tech: ["React", "Polaris", "GraphQL", "Shopify Functions", "Prisma"],
     metrics: ["120+ merchants", "$400K GMV/mo", "4.8★ app store"],
     color: "#5e9eff",
-    liveUrl: "#",
-    codeUrl: "#",
+    liveUrl: "https://apps.shopify.com/glow-videos"
   },
   {
     id: 3,
-    tag: "HEADLESS STOREFRONT",
-    title: "Terrain Outdoor",
+    tag: "SHOPIFY APP",
+    title: "Boost My Cart - Shopify App",
     description:
-      "Hydrogen + Remix headless storefront for an outdoor gear brand with 3,000+ SKUs. Custom faceted filtering, real-time inventory, multi-currency, and a custom 3D product viewer.",
-    image: "https://images.unsplash.com/photo-1491555103944-7c647fd857e6?w=800&h=500&fit=crop&auto=format",
-    tech: ["Hydrogen", "Remix", "TypeScript", "Tailwind", "Three.js"],
-    metrics: ["+52% page speed", "3K+ SKUs", "Multi-currency"],
-    color: "#e07b39",
-    liveUrl: "#",
-    codeUrl: "#",
+      "Developed a Shopify cart optimization app focused on increasing AOV through cart upsells, free gift campaigns, shipping protection, cart goals, and promotional offers. Built embedded admin experiences with Polaris and integrated Shopify APIs for real-time cart interactions.",
+    image: "https://cdn.shopify.com/s/files/1/0719/1937/0434/files/boost-my-cart.png?v=1782059804",
+    tech: ["React", "Polaris", "GraphQL", "Shopify Functions", "Prisma"],
+    metrics: ["120+ merchants", "$400K GMV/mo", "4.8★ app store"],
+    color: "#5e9eff",
+    liveUrl: "https://apps.shopify.com/glow-videos"
   },
   {
     id: 4,
     tag: "CHECKOUT EXTENSION",
-    title: "SmartUpsell at Checkout",
+    title: "Custom Fields at Checkout",
     description:
-      "Shopify Checkout UI Extension adding AI-driven product recommendations at checkout. Built with Checkout Extensions API, integrated with Klaviyo purchase data for personalization.",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=500&fit=crop&auto=format",
+      "Built Shopify Checkout UI Extensions for Shopify Plus merchants, enabling custom checkout fields, order personalization, delivery instructions, and additional customer inputs. Integrated data capture directly into checkout while maintaining a seamless user experience.",
+    image: "https://cdn.shopify.com/s/files/1/0719/1937/0434/files/flooretcommercial.png?v=1782061029",
     tech: ["Checkout Extensions", "React", "Shopify Functions", "Klaviyo API"],
     metrics: ["+22% AOV", "300ms render", "Zero-friction UX"],
     color: "#b47fe0",
-    liveUrl: "#",
-    codeUrl: "#",
+    liveUrl: "https://flooretcommercial.com/"
   },
   {
     id: 5,
-    tag: "SHOPIFY THEME",
-    title: "Forge Menswear",
+    tag: "SHOPIFY THEME REVAMP",
+    title: "Jungle Merigold",
     description:
-      "Performance-first theme for a mid-market menswear brand. Custom lookbook feature, size finder quiz, Shopify Markets multi-region with auto locale routing, and 100 Lighthouse score.",
-    image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=500&fit=crop&auto=format",
+      "Enhanced and customized the Shopify storefront for a luxury fashion and lifestyle brand. Developed custom landing pages, collection experiences, advanced product merchandising features, responsive UI improvements, and optimized storefront performance across devices.",
+    image: "https://cdn.shopify.com/s/files/1/0719/1937/0434/files/jungle-merigold.png?v=1782059805",
     tech: ["Liquid", "Vanilla JS", "SCSS", "Shopify Markets"],
     metrics: ["100 Lighthouse", "+29% sessions", "4 locales"],
-    color: "#95bf47",
-    liveUrl: "#",
-    codeUrl: "#",
+    color: "#c383fb",
+    liveUrl: "https://junglemarigold.com/"
   },
   {
     id: 6,
-    tag: "INTEGRATION",
-    title: "ERP Sync Middleware",
+    tag: "SHOPIFY APP",
+    title: "Shopify Public Apps",
     description:
-      "Middleware service syncing inventory and orders between Shopify and a legacy ERP (NetSuite). Webhook-driven, Redis queue, idempotent write logic, handles 10K+ orders/day with zero data loss.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=500&fit=crop&auto=format",
+      "Designed and developed multiple Shopify public apps serving merchants across different use cases, including video commerce, cart optimization, checkout customization, and customer engagement. Built scalable architectures using Shopify APIs, Polaris, React, Node.js, and GraphQL.",
+    image: "https://cdn.shopify.com/s/files/1/0719/1937/0434/files/other-apps.png?v=1782059804",
     tech: ["Node.js", "Redis", "PostgreSQL", "Shopify Webhooks", "NetSuite"],
     metrics: ["10K+ orders/day", "99.99% uptime", "< 500ms sync"],
     color: "#5e9eff",
     liveUrl: "#",
-    codeUrl: "#",
   },
+  {
+    id: 7,
+    tag: "INTEGRATION",
+    title: "Many third-party app integrations",
+    description:
+      "Integrated a wide range of Shopify applications and external platforms including Klaviyo, Judge.me, ReCharge, Yotpo, Gorgias, Loop Returns, Shiprocket, Razorpay, and Google services. Implemented custom workflows, API integrations, event tracking, and automation solutions tailored to merchant requirements.",
+    image: "https://cdn.shopify.com/s/files/1/0719/1937/0434/files/flooretcommercial.png?v=1782061029",
+    tech: ["Checkout Extensions", "React", "Shopify Functions", "Klaviyo API"],
+    metrics: ["+22% AOV", "300ms render", "Zero-friction UX"],
+    color: "#95bf47",
+    liveUrl: "https://flooretcommercial.com/",
+  },
+  {
+    id: 8,
+    tag: "SHOPIFY THEME REVAMP",
+    title: "Neemans",
+    description:
+      "Contributed to storefront enhancements and custom Shopify development for one of India's leading footwear brands. Built custom sections, collection page improvements, performance optimizations, mobile responsiveness enhancements, and conversion-focused user experiences.",
+    image: "https://cdn.shopify.com/s/files/1/0719/1937/0434/files/neemans.png?v=1782062116",
+    tech: ["Liquid", "HTML5", "CSS3", "Javascript", "Judgeme", "Klaviyo"],
+    metrics: ["+38% conversion", "2.1s load time", "4.9★ client"],
+    color: "#c383fb",
+    liveUrl: "https://neemans.com/",
+  },
+  {
+    id: 9,
+    tag: "SHOPIFY THEME REVAMP",
+    title: "Teabox",
+    description:
+      "Developed custom Shopify features and storefront enhancements for a global tea brand. Worked on product merchandising, subscription-related experiences, custom landing pages, collection page improvements, and performance optimization to improve customer engagement and conversions.",
+    image: "https://cdn.shopify.com/s/files/1/0719/1937/0434/files/teabox.png?v=1782062376",
+    tech: ["Liquid", "HTML5", "CSS3", "Javascript", "Judgeme", "Klaviyo"],
+    metrics: ["+38% conversion", "2.1s load time", "4.9★ client"],
+    color: "#c383fb",
+    liveUrl: "https://in.teabox.com/",
+  }
 ];
 
-const filters = ["All", "SHOPIFY THEME", "SHOPIFY APP", "HEADLESS STOREFRONT", "CHECKOUT EXTENSION", "INTEGRATION"];
+const filters = ["All", "SHOPIFY THEME REVAMP", "SHOPIFY APP", "CHECKOUT EXTENSION", "INTEGRATION"];
 
 export function Projects() {
   const [filter, setFilter] = useState("All");
@@ -119,7 +149,7 @@ export function Projects() {
 
           {/* Filter */}
           <div className="flex flex-wrap gap-2">
-            {["All", "Theme", "App", "Headless", "Extension", "Integration"].map((label, i) => {
+            {["All", "Theme", "App", "Extension", "Integration"].map((label, i) => {
               const val = filters[i];
               return (
                 <button
@@ -281,21 +311,6 @@ export function Projects() {
                     }}
                   >
                     <ExternalLink size={12} /> LIVE SITE
-                  </a>
-                  <a
-                    href={project.codeUrl}
-                    style={{
-                      fontFamily: "'DM Mono', monospace",
-                      fontSize: "0.72rem",
-                      letterSpacing: "0.06em",
-                      color: "#7a7a85",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "0.3rem",
-                      textDecoration: "none",
-                    }}
-                  >
-                    <GitHubIcon size={12} /> SOURCE
                   </a>
                 </div>
               </div>

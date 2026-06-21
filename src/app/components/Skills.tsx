@@ -8,8 +8,11 @@ const categories = [
       { name: "Shopify CLI & Theme Kit", level: 95 },
       { name: "Online Store 2.0", level: 96 },
       { name: "Metafields & Metaobjects", level: 92 },
-      { name: "Shopify Checkout Extensions", level: 88 },
-      { name: "Shopify Functions", level: 82 },
+      { name: "Shopify Checkout & Other Extensions", level: 88 },
+      { name: "Shopify Functions", level: 80 },
+      { name: "Shopify B2B", level: 85 },
+      { name: "Shopify Markets", level: 80 },
+      { name: "Shopify Flow & Automations", level: 88 },
     ],
   },
   {
