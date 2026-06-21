@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
-import { GitHubIcon } from "./icons/SocialIcons";
 
 const projects = [
   {
