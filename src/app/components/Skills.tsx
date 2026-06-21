@@ -13,6 +13,7 @@ const categories = [
       { name: "Shopify B2B", level: 85 },
       { name: "Shopify Markets", level: 80 },
       { name: "Shopify Flow & Automations", level: 88 },
+      { name: "Shopify Admin", level: 90 },
     ],
   },
   {
@@ -45,15 +46,15 @@ const categories = [
       { name: "Redis & Caching", level: 75 },
       { name: "Git & CI/CD", level: 88 },
       { name: "AWS / Vercel", level: 80 },
-      { name: "Algolia Search", level: 83 },
+      { name: "AI Automations", level: 70 },
     ],
   },
 ];
 
 const techTags = [
-  "Shopify", "Liquid", "React", "Node.js", "GraphQL", "REST", "TypeScript",
+  "Shopify", "Liquid", "React", "Node.js", "GraphQL API", "REST API", "TypeScript",
   "Tailwind", "Polaris", "Hydrogen", "Oxygen", "Remix", "Next.js", "Prisma",
-  "PostgreSQL", "Redis", "Vercel", "AWS", "Algolia", "Klaviyo", "ReCharge",
+  "PostgreSQL", "Vercel"
 ];
 
 export function Skills() {
