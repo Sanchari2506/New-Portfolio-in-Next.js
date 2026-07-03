@@ -1,22 +1,6 @@
-import { useState } from "react";
-import { Mail, MapPin, Clock, Send, CheckCircle, Phone } from "lucide-react";
-
-type FormData = { name: string; email: string; budget: string; message: string };
+import { Mail, MapPin, Phone } from "lucide-react";
 
 export function Contact() {
-  const [form, setForm] = useState<FormData>({ name: "", email: "", budget: "", message: "" });
-  const [sent, setSent] = useState(false);
-  const [sending, setSending] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSending(true);
-    setTimeout(() => {
-      setSending(false);
-      setSent(true);
-    }, 1400);
-  };
-
   return (
     <section id="contact" style={{ padding: "7rem 0", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
       <div className="max-w-6xl mx-auto px-6">
