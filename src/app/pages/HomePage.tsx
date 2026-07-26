@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router";
 import { Nav } from "../components/Nav";
 import { Hero } from "../components/Hero";
+import { TrustedBrands } from "../components/TrustedBrands";
 import { Skills } from "../components/Skills";
 import { Projects } from "../components/Projects";
 import { Experience } from "../components/Experience";
@@ -70,6 +71,7 @@ export function HomePage() {
       <Nav />
       <main id="main-content">
         <Hero />
+        <TrustedBrands />
         <Skills />
         <Projects />
         <Experience />
