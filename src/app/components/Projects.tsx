@@ -121,6 +121,30 @@ const projects = [
     metrics: ["+75% conversion", "2.1s load time", "4.9★ client"],
     color: "#c383fb",
     liveUrl: "https://stuffieland.in/",
+  },
+  {
+    id: 11,
+    tag: "SHOPIFY THEME REVAMP",
+    title: "Phool",
+    description:
+      "Developed custom Shopify features and storefront enhancements for a global tea brand. Worked on product merchandising, subscription-related experiences, custom landing pages, collection page improvements, and performance optimization to improve customer engagement and conversions.",
+    image: "https://cdn.shopify.com/s/files/1/0719/1937/0434/files/Desktop-phool.png?v=1785082734",
+    tech: ["Liquid", "HTML5", "CSS3", "Javascript", "Judgeme", "Klaviyo"],
+    metrics: ["+60% conversion", "2.1s load time", "4.9★ client"],
+    color: "#c383fb",
+    liveUrl: "https://phool.co/",
+  },
+  {
+    id: 12,
+    tag: "SHOPIFY THEME REVAMP",
+    title: "Flooret Commercial",
+    description:
+      "Integrated a wide range of Shopify applications and external platforms including Klaviyo, Judge.me, ReCharge, Yotpo, Gorgias, Loop Returns, Shiprocket, Razorpay, and Google services. Implemented custom workflows, API integrations, event tracking, and automation solutions tailored to merchant requirements.",
+    image: "https://cdn.shopify.com/s/files/1/0719/1937/0434/files/flooretcommercial.png?v=1782061029",
+    tech: ["Checkout Extensions", "React", "Shopify Functions", "Klaviyo API"],
+    metrics: ["+60% conversion", "300ms render", "Zero-friction UX"],
+    color: "#c383fb",
+    liveUrl: "https://flooretcommercial.com/",
   }
 ];
 
