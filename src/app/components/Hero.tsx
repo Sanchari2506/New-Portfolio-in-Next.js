@@ -45,6 +45,7 @@ export function Hero() {
     >
       {/* Grid background */}
       <div
+        aria-hidden="true"
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
@@ -55,6 +56,7 @@ export function Hero() {
 
       {/* Accent glow */}
       <div
+        aria-hidden="true"
         className="absolute pointer-events-none"
         style={{
           top: "10%",
@@ -94,8 +96,10 @@ export function Hero() {
             <div
               className="mb-6 flex items-center gap-2"
               style={{ minHeight: "2rem" }}
+              aria-label={roles[roleIdx]}
             >
               <span
+                aria-hidden="true"
                 style={{
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)",
@@ -106,6 +110,7 @@ export function Hero() {
                 {displayed}
               </span>
               <span
+                aria-hidden="true"
                 className="animate-pulse"
                 style={{ width: "2px", height: "1.4em", background: "#95bf47", display: "inline-block" }}
               />
@@ -195,6 +200,7 @@ export function Hero() {
               <div style={{ position: "relative", display: "inline-block" }}>
                 {/* Green accent border */}
                 <div
+                  aria-hidden="true"
                   style={{
                     position: "absolute",
                     inset: "-4px",
@@ -217,7 +223,7 @@ export function Hero() {
                 >
                   <img
                     src="https://cdn.shopify.com/s/files/1/0789/8523/2583/files/profile-pic.png?v=1781689343"
-                    alt="Sanchari Rakshit — Shopify Developer"
+                    alt="Portrait of Sanchari Rakshit, Shopify Developer"
                     style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
                   />
                 </div>
@@ -246,7 +252,7 @@ export function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-4">
+            <dl className="grid grid-cols-2 gap-4">
               {[
                 { number: "5+", label: "Years Experience", sub: "Shopify ecosystem" },
                 { number: "120+", label: "Projects Shipped", sub: "Stores & custom apps" },
@@ -264,6 +270,7 @@ export function Hero() {
                   }}
                 >
                   <div
+                    aria-hidden="true"
                     style={{
                       position: "absolute",
                       top: 0,
@@ -273,7 +280,7 @@ export function Hero() {
                       background: "#95bf47",
                     }}
                   />
-                  <p
+                  <dt
                     style={{
                       fontFamily: "'Plus Jakarta Sans', sans-serif",
                       fontSize: "2rem",
@@ -284,22 +291,22 @@ export function Hero() {
                     }}
                   >
                     {number}
-                  </p>
-                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.85rem", color: "#f0eeea", fontWeight: 500 }}>
+                  </dt>
+                  <dd style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.85rem", color: "#f0eeea", fontWeight: 500 }}>
                     {label}
-                  </p>
-                  <p style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.7rem", color: "#7a7a85", marginTop: "0.25rem" }}>
+                  </dd>
+                  <dd style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.7rem", color: "#7a7a85", marginTop: "0.25rem" }}>
                     {sub}
-                  </p>
+                  </dd>
                 </div>
               ))}
-            </div>
+            </dl>
           </div>
         </div>
 
         {/* Scroll hint */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-          <ArrowDown size={16} style={{ color: "#7a7a85" }} />
+          <ArrowDown size={16} style={{ color: "#7a7a85" }} aria-hidden="true" focusable="false" />
         </div>
       </div>
     </section>

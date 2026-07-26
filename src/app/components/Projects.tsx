@@ -183,13 +183,14 @@ export function Projects() {
           </div>
 
           {/* Filter */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2" role="group" aria-label="Filter projects by type">
             {["All", "Theme", "App", "Extension", "Integration"].map((label, i) => {
               const val = filters[i];
               return (
                 <button
                   key={label}
                   onClick={() => setFilter(val)}
+                  aria-pressed={filter === val}
                   style={{
                     fontFamily: "'DM Mono', monospace",
                     fontSize: "0.7rem",
@@ -212,7 +213,7 @@ export function Projects() {
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {visible.map((project) => (
-            <div
+            <article
               key={project.id}
               onMouseEnter={() => setHovered(project.id)}
               onMouseLeave={() => setHovered(null)}
@@ -231,7 +232,8 @@ export function Projects() {
               <div style={{ position: "relative", overflow: "hidden", height: "200px", background: "#1c1c20" }}>
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={`${project.title} Shopify project preview`}
+                  loading="lazy"
                   style={{
                     width: "100%",
                     height: "100%",
@@ -241,6 +243,7 @@ export function Projects() {
                   }}
                 />
                 <div
+                  aria-hidden="true"
                   style={{
                     position: "absolute",
                     inset: 0,
@@ -332,24 +335,40 @@ export function Projects() {
 
                 {/* Links */}
                 <div className="flex gap-4">
-                  <a
-                    href={project.liveUrl}
-                    style={{
-                      fontFamily: "'DM Mono', monospace",
-                      fontSize: "0.72rem",
-                      letterSpacing: "0.06em",
-                      color: "#95bf47",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "0.3rem",
-                      textDecoration: "none",
-                    }}
-                  >
-                    <ExternalLink size={12} /> LIVE SITE
-                  </a>
+                  {project.liveUrl === "#" ? (
+                    <span
+                      style={{
+                        fontFamily: "'DM Mono', monospace",
+                        fontSize: "0.72rem",
+                        letterSpacing: "0.06em",
+                        color: "#7a7a85",
+                      }}
+                    >
+                      PRIVATE APP
+                    </span>
+                  ) : (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Visit ${project.title} live site`}
+                      style={{
+                        fontFamily: "'DM Mono', monospace",
+                        fontSize: "0.72rem",
+                        letterSpacing: "0.06em",
+                        color: "#95bf47",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "0.3rem",
+                        textDecoration: "none",
+                      }}
+                    >
+                      <ExternalLink size={12} aria-hidden="true" focusable="false" /> LIVE SITE
+                    </a>
+                  )}
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

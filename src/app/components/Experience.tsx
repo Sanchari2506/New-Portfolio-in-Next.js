@@ -91,10 +91,14 @@ export function Experience() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
           {/* Sidebar */}
-          <div style={{ borderRight: "1px solid rgba(255,255,255,0.06)" }}>
+          <div role="tablist" aria-label="Work experience" style={{ borderRight: "1px solid rgba(255,255,255,0.06)" }}>
             {timeline.map((item) => (
               <button
                 key={item.id}
+                id={`experience-tab-${item.id}`}
+                role="tab"
+                aria-selected={active === item.id}
+                aria-controls="experience-panel"
                 onClick={() => setActive(item.id)}
                 style={{
                   width: "100%",
@@ -133,7 +137,13 @@ export function Experience() {
           </div>
 
           {/* Detail panel */}
-          <div className="md:col-span-2" style={{ padding: "2rem 2rem 2rem 2.5rem" }}>
+          <div
+            id="experience-panel"
+            role="tabpanel"
+            aria-labelledby={`experience-tab-${current.id}`}
+            className="md:col-span-2"
+            style={{ padding: "2rem 2rem 2rem 2.5rem" }}
+          >
             <div className="flex items-start justify-between flex-wrap gap-2 mb-1">
               <h3
                 style={{
@@ -185,7 +195,7 @@ export function Experience() {
             <ul className="flex flex-col gap-3">
               {current.highlights.map((h) => (
                 <li key={h} className="flex items-start gap-3">
-                  <CheckCircle size={15} style={{ color: "#95bf47", flexShrink: 0, marginTop: "0.15rem" }} />
+                  <CheckCircle size={15} style={{ color: "#95bf47", flexShrink: 0, marginTop: "0.15rem" }} aria-hidden="true" focusable="false" />
                   <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.88rem", color: "#f0eeea", lineHeight: 1.6 }}>
                     {h}
                   </span>

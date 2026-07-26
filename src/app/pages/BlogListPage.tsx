@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { Nav } from "../components/Nav";
 import { Footer } from "../components/Footer";
+import { Seo } from "../components/Seo";
 import { getPostsSorted } from "../data/blog-posts";
 
 function formatDate(date: string) {
@@ -17,8 +18,32 @@ export function BlogListPage() {
 
   return (
     <>
+      <Seo
+        title="Shopify Development Blog | Sanchari Rakshit"
+        description="Practical Shopify development notes on Liquid, Online Store 2.0, apps, checkout extensions, Admin API changes, and storefront performance."
+        canonicalPath="/blog"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          name: "Shopify Development Blog",
+          description:
+            "Practical Shopify development notes on Liquid, apps, checkout extensions, and storefront performance.",
+          url: `${window.location.origin}/blog`,
+          author: {
+            "@type": "Person",
+            name: "Sanchari Rakshit",
+          },
+          blogPost: posts.map((post) => ({
+            "@type": "BlogPosting",
+            headline: post.title,
+            description: post.excerpt,
+            datePublished: post.date,
+            url: `${window.location.origin}/blog/${post.slug}`,
+          })),
+        }}
+      />
       <Nav />
-      <main style={{ paddingTop: "100px", paddingBottom: "5rem" }}>
+      <main id="main-content" style={{ paddingTop: "100px", paddingBottom: "5rem" }}>
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-14">
             <p
@@ -75,7 +100,9 @@ export function BlogListPage() {
                 onMouseLeave={(e) => {
                   e.currentTarget.style.borderColor = "rgba(255,255,255,0.06)";
                 }}
+                aria-label={`Read ${post.title}`}
               >
+                <article>
                 <div className="flex flex-wrap items-center gap-4 mb-4">
                   <span
                     className="flex items-center gap-1.5"
@@ -86,8 +113,8 @@ export function BlogListPage() {
                       letterSpacing: "0.04em",
                     }}
                   >
-                    <Calendar size={13} />
-                    {formatDate(post.date)}
+                    <Calendar size={13} aria-hidden="true" focusable="false" />
+                    <time dateTime={post.date}>{formatDate(post.date)}</time>
                   </span>
                   <span
                     className="flex items-center gap-1.5"
@@ -98,7 +125,7 @@ export function BlogListPage() {
                       letterSpacing: "0.04em",
                     }}
                   >
-                    <Clock size={13} />
+                    <Clock size={13} aria-hidden="true" focusable="false" />
                     {post.readTime}
                   </span>
                 </div>
@@ -158,9 +185,10 @@ export function BlogListPage() {
                     }}
                   >
                     READ POST
-                    <ArrowRight size={14} />
+                    <ArrowRight size={14} aria-hidden="true" focusable="false" />
                   </span>
                 </div>
+                </article>
               </Link>
             ))}
           </div>

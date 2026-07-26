@@ -23,6 +23,7 @@ function SocialIcon({
       strokeLinejoin="round"
       className={className}
       aria-hidden="true"
+      focusable="false"
     >
       {children}
     </svg>

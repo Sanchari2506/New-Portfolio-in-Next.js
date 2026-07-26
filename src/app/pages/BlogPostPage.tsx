@@ -1,9 +1,9 @@
-import { useEffect } from "react";
 import { Link, useParams } from "react-router";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { Nav } from "../components/Nav";
 import { Footer } from "../components/Footer";
 import { MarkdownContent } from "../components/MarkdownContent";
+import { Seo } from "../components/Seo";
 import { getPostBySlug } from "../data/blog-posts";
 
 function formatDate(date: string) {
@@ -18,20 +18,17 @@ export function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getPostBySlug(slug) : undefined;
 
-  useEffect(() => {
-    if (post) {
-      document.title = `${post.title} | Sanchari Rakshit`;
-    }
-    return () => {
-      document.title = "Sanchari Rakshit | Shopify Developer & Liquid Architect";
-    };
-  }, [post]);
-
   if (!post) {
     return (
       <>
+        <Seo
+          title="Post Not Found | Sanchari Rakshit"
+          description="The requested Shopify development article could not be found."
+          canonicalPath="/blog"
+        />
         <Nav />
         <main
+          id="main-content"
           className="max-w-6xl mx-auto px-6"
           style={{ paddingTop: "120px", paddingBottom: "5rem", textAlign: "center" }}
         >
@@ -69,8 +66,33 @@ export function BlogPostPage() {
 
   return (
     <>
+      <Seo
+        title={`${post.title} | Sanchari Rakshit`}
+        description={post.excerpt}
+        canonicalPath={`/blog/${post.slug}`}
+        type="article"
+        publishedTime={post.date}
+        tags={post.tags}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: post.title,
+          description: post.excerpt,
+          datePublished: post.date,
+          author: {
+            "@type": "Person",
+            name: "Sanchari Rakshit",
+          },
+          publisher: {
+            "@type": "Person",
+            name: "Sanchari Rakshit",
+          },
+          mainEntityOfPage: `${window.location.origin}/blog/${post.slug}`,
+          keywords: post.tags.join(", "),
+        }}
+      />
       <Nav />
-      <main style={{ paddingTop: "100px", paddingBottom: "5rem" }}>
+      <main id="main-content" style={{ paddingTop: "100px", paddingBottom: "5rem" }}>
         <article className="max-w-3xl mx-auto px-6">
           <Link
             to="/blog"
@@ -89,7 +111,7 @@ export function BlogPostPage() {
               e.currentTarget.style.color = "#7a7a85";
             }}
           >
-            <ArrowLeft size={14} />
+            <ArrowLeft size={14} aria-hidden="true" focusable="false" />
             ALL POSTS
           </Link>
 
@@ -102,8 +124,8 @@ export function BlogPostPage() {
                 color: "#7a7a85",
               }}
             >
-              <Calendar size={13} />
-              {formatDate(post.date)}
+              <Calendar size={13} aria-hidden="true" focusable="false" />
+              <time dateTime={post.date}>{formatDate(post.date)}</time>
             </span>
             <span
               className="flex items-center gap-1.5"
@@ -113,7 +135,7 @@ export function BlogPostPage() {
                 color: "#7a7a85",
               }}
             >
-              <Clock size={13} />
+              <Clock size={13} aria-hidden="true" focusable="false" />
               {post.readTime}
             </span>
           </div>

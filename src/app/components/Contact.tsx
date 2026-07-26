@@ -1,6 +1,12 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 
 export function Contact() {
+  const contactItems = [
+    { icon: Mail, label: "EMAIL", value: "sanchari.shopify@gmail.com", href: "mailto:sanchari.shopify@gmail.com" },
+    { icon: Phone, label: "PHONE", value: "+91 62903 98828", href: "tel:+916290398828" },
+    { icon: MapPin, label: "LOCATION", value: "Kolkata, India — remote worldwide" },
+  ];
+
   return (
     <section id="contact" style={{ padding: "7rem 0", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
       <div className="max-w-6xl mx-auto px-6">
@@ -37,11 +43,7 @@ export function Contact() {
             </p>
 
             <div className="flex flex-col gap-5 mb-8">
-              {[
-                { icon: Mail, label: "EMAIL", value: "sanchari.shopify@gmail.com" },
-                { icon: Phone, label: "PHONE", value: "+916290398828"},
-                { icon: MapPin, label: "LOCATION", value: "Kolkata, India — remote worldwide" }
-              ].map(({ icon: Icon, label, value }) => (
+              {contactItems.map(({ icon: Icon, label, value, href }) => (
                 <div key={label} className="flex items-start gap-4">
                   <div
                     style={{
@@ -55,15 +57,21 @@ export function Contact() {
                       flexShrink: 0,
                     }}
                   >
-                    <Icon size={15} style={{ color: "#95bf47" }} />
+                    <Icon size={15} style={{ color: "#95bf47" }} aria-hidden="true" focusable="false" />
                   </div>
                   <div>
                     <p style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.68rem", color: "#7a7a85", letterSpacing: "0.1em", marginBottom: "0.2rem" }}>
                       {label}
                     </p>
-                    <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.9rem", color: "#f0eeea" }}>
-                      {value}
-                    </p>
+                    {href ? (
+                      <a href={href} style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.9rem", color: "#f0eeea", textDecoration: "none" }}>
+                        {value}
+                      </a>
+                    ) : (
+                      <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.9rem", color: "#f0eeea" }}>
+                        {value}
+                      </p>
+                    )}
                   </div>
                 </div>
               ))}
@@ -76,6 +84,7 @@ export function Contact() {
               >
                 SERVICES OFFERED
               </p>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
               {[
                 "Custom Shopify Theme Development",
                 "Shopify App Development",
@@ -85,15 +94,16 @@ export function Contact() {
                 "Third-party Integrations",
                 "Checkout Extension Development",
               ].map((s) => (
-                <div
+                <li
                   key={s}
                   className="flex items-center gap-2 py-2"
                   style={{ borderBottom: "1px solid rgba(255,255,255,0.04)" }}
                 >
-                  <div style={{ width: "5px", height: "5px", background: "#95bf47", flexShrink: 0 }} />
+                  <div aria-hidden="true" style={{ width: "5px", height: "5px", background: "#95bf47", flexShrink: 0 }} />
                   <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.85rem", color: "#f0eeea" }}>{s}</span>
-                </div>
+                </li>
               ))}
+              </ul>
             </div>
           </div>
           

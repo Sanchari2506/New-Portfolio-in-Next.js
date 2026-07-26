@@ -14,6 +14,9 @@ export function PageShell({ children }: PageShellProps) {
         overflowX: "hidden",
       }}
     >
+      <a className="skip-link" href="#main-content">
+        Skip to main content
+      </a>
       {children}
     </div>
   );

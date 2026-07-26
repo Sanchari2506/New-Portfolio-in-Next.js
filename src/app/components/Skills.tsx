@@ -86,10 +86,14 @@ export function Skills() {
         </div>
 
         {/* Tabs */}
-        <div className="flex flex-wrap gap-2 mb-10">
+        <div className="flex flex-wrap gap-2 mb-10" role="tablist" aria-label="Skill categories">
           {categories.map((cat, i) => (
             <button
               key={cat.label}
+              id={`skills-tab-${i}`}
+              role="tab"
+              aria-selected={activeTab === i}
+              aria-controls={`skills-panel-${i}`}
               onClick={() => setActiveTab(i)}
               style={{
                 fontFamily: "'DM Mono', monospace",
@@ -109,7 +113,12 @@ export function Skills() {
         </div>
 
         {/* Skill bars */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
+        <div
+          id={`skills-panel-${activeTab}`}
+          role="tabpanel"
+          aria-labelledby={`skills-tab-${activeTab}`}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14"
+        >
           {categories[activeTab].skills.map((skill) => (
             <div key={skill.name}>
               <div className="flex justify-between mb-2">
@@ -120,8 +129,16 @@ export function Skills() {
                   {skill.level}%
                 </span>
               </div>
-              <div style={{ height: "3px", background: "rgba(255,255,255,0.06)", position: "relative" }}>
+              <div
+                role="progressbar"
+                aria-label={`${skill.name} proficiency`}
+                aria-valuemin={0}
+                aria-valuemax={100}
+                aria-valuenow={skill.level}
+                style={{ height: "3px", background: "rgba(255,255,255,0.06)", position: "relative" }}
+              >
                 <div
+                  aria-hidden="true"
                   style={{
                     height: "100%",
                     width: `${skill.level}%`,

@@ -49,6 +49,7 @@ export function Nav() {
 
   return (
     <nav
+      aria-label="Primary navigation"
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
         background: scrolled || isBlog ? "rgba(13,13,15,0.92)" : "transparent",
@@ -67,6 +68,7 @@ export function Nav() {
             letterSpacing: "0.08em",
             textDecoration: "none",
           }}
+          aria-label="Sanchari Rakshit home"
           onClick={() => {
             setOpen(false);
             if (location.pathname === "/") {
@@ -84,6 +86,7 @@ export function Nav() {
                 onClick={() => scrollToSection(l)}
                 className="transition-colors duration-200 cursor-pointer"
                 style={navButtonStyle(l)}
+                aria-current={active === l ? "location" : undefined}
                 onMouseEnter={(e) => {
                   if (active !== l) (e.target as HTMLElement).style.color = "#f0eeea";
                 }}
@@ -100,6 +103,7 @@ export function Nav() {
               to="/blog"
               className="transition-colors duration-200"
               style={navButtonStyle("Blog")}
+              aria-current={active === "Blog" ? "page" : undefined}
               onMouseEnter={(e) => {
                 if (active !== "Blog") e.currentTarget.style.color = "#f0eeea";
               }}
@@ -116,14 +120,17 @@ export function Nav() {
           className="md:hidden p-1"
           style={{ color: "#f0eeea", background: "none", border: "none", cursor: "pointer" }}
           onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
+          aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
         >
-          {open ? <X size={20} /> : <Menu size={20} />}
+          {open ? <X size={20} aria-hidden="true" focusable="false" /> : <Menu size={20} aria-hidden="true" focusable="false" />}
         </button>
       </div>
 
       {open && (
         <div
+          id="mobile-navigation"
           style={{ background: "#141417", borderTop: "1px solid rgba(255,255,255,0.06)" }}
           className="md:hidden px-6 py-4 flex flex-col gap-4"
         >
@@ -138,9 +145,10 @@ export function Nav() {
                 color: "#f0eeea",
                 background: "none",
                 border: "none",
-                textAlign: "left",
+              textAlign: "left",
                 cursor: "pointer",
               }}
+              aria-current={active === l ? "location" : undefined}
             >
               {l.toUpperCase()}
             </button>
@@ -148,6 +156,7 @@ export function Nav() {
           <Link
             to="/blog"
             onClick={() => setOpen(false)}
+            aria-current={active === "Blog" ? "page" : undefined}
             style={{
               fontFamily: "'DM Mono', monospace",
               fontSize: "0.85rem",
