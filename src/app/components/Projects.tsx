@@ -109,6 +109,18 @@ const projects = [
     metrics: ["+38% conversion", "2.1s load time", "4.9★ client"],
     color: "#c383fb",
     liveUrl: "https://in.teabox.com/",
+  },
+  {
+    id: 10,
+    tag: "SHOPIFY THEME REVAMP",
+    title: "Stuffieland",
+    description:
+      "Developed custom Shopify features and storefront enhancements for a global tea brand. Worked on product merchandising, subscription-related experiences, custom landing pages, collection page improvements, and performance optimization to improve customer engagement and conversions.",
+    image: "https://cdn.shopify.com/s/files/1/0719/1937/0434/files/Desktop_-_1.png?v=1785081919",
+    tech: ["Liquid", "HTML5", "CSS3", "Javascript", "Judgeme", "Klaviyo"],
+    metrics: ["+75% conversion", "2.1s load time", "4.9★ client"],
+    color: "#c383fb",
+    liveUrl: "https://stuffieland.in/",
   }
 ];
 
