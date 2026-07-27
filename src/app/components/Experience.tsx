@@ -34,7 +34,7 @@ const timeline = [
     id: 3,
     role: "Freelance Shopify Developer",
     company: "Self-Employed",
-    period: "2025 — Present",
+    period: "2025 — 2025",
     type: "Freelance",
     description:
       "Working with global Shopify merchants on custom theme development, Shopify Plus implementations, app integrations, and conversion-focused store optimization.",
@@ -44,8 +44,22 @@ const timeline = [
       "Provided ongoing maintenance, technical consulting, and growth support",
     ],
   },
-  {
+    {
     id: 4,
+    role: "Senior Shopify Developer",
+    company: "Allure Commerce",
+    period: "2025 - 2025",
+    type: "Full-Time",
+    description:
+      "Providing strategic Shopify website development and optimization, technical architecture guidance, and growth-focused recommendations for eCommerce brands. Supporting merchants with platform optimization, custom solutions, and scalable Shopify implementations.",
+    highlights: [
+      "Provided strategic guidance on Shopify Plus architecture and enterprise-scale commerce solutions",
+      "Implemented Agentic Commerce experiences leveraging AI-powered shopping and automation workflows",
+      "Designed and configured Shopify B2B ecosystems, including custom catalogs, company accounts, and wholesale purchasing flows",
+    ],
+  },
+  {
+    id: 5,
     role: "Shopify Consultant",
     company: "OptiPhoenix",
     period: "2026 — Present",
