@@ -87,30 +87,6 @@ const projects = [
     liveUrl: "https://flooretcommercial.com/",
   },
   {
-    id: 8,
-    tag: "SHOPIFY THEME REVAMP",
-    title: "Neemans",
-    description:
-      "Contributed to storefront enhancements and custom Shopify development for one of India's leading footwear brands. Built custom sections, collection page improvements, performance optimizations, mobile responsiveness enhancements, and conversion-focused user experiences.",
-    image: "https://cdn.shopify.com/s/files/1/0719/1937/0434/files/neemans.png?v=1782062116",
-    tech: ["Liquid", "HTML5", "CSS3", "Javascript", "Judgeme", "Klaviyo"],
-    metrics: ["+38% conversion", "2.1s load time", "4.9★ client"],
-    color: "#c383fb",
-    liveUrl: "https://neemans.com/",
-  },
-  {
-    id: 9,
-    tag: "SHOPIFY THEME REVAMP",
-    title: "Teabox",
-    description:
-      "Developed custom Shopify features and storefront enhancements for a global tea brand. Worked on product merchandising, subscription-related experiences, custom landing pages, collection page improvements, and performance optimization to improve customer engagement and conversions.",
-    image: "https://cdn.shopify.com/s/files/1/0719/1937/0434/files/teabox.png?v=1782062376",
-    tech: ["Liquid", "HTML5", "CSS3", "Javascript", "Judgeme", "Klaviyo"],
-    metrics: ["+38% conversion", "2.1s load time", "4.9★ client"],
-    color: "#c383fb",
-    liveUrl: "https://in.teabox.com/",
-  },
-  {
     id: 10,
     tag: "SHOPIFY THEME REVAMP",
     title: "Stuffieland",
@@ -121,18 +97,6 @@ const projects = [
     metrics: ["+75% conversion", "2.1s load time", "4.9★ client"],
     color: "#c383fb",
     liveUrl: "https://stuffieland.in/",
-  },
-  {
-    id: 11,
-    tag: "SHOPIFY THEME REVAMP",
-    title: "Phool",
-    description:
-      "Developed custom Shopify features and storefront enhancements for a global tea brand. Worked on product merchandising, subscription-related experiences, custom landing pages, collection page improvements, and performance optimization to improve customer engagement and conversions.",
-    image: "https://cdn.shopify.com/s/files/1/0719/1937/0434/files/Desktop-phool.png?v=1785082734",
-    tech: ["Liquid", "HTML5", "CSS3", "Javascript", "Judgeme", "Klaviyo"],
-    metrics: ["+60% conversion", "2.1s load time", "4.9★ client"],
-    color: "#c383fb",
-    liveUrl: "https://phool.co/",
   },
   {
     id: 12,

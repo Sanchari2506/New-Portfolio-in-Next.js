@@ -1,11 +1,10 @@
 const brands = [
-  { id: 1, name: "Dot & Key" },
-  { id: 2, name: "TeaBox" },
-  { id: 3, name: "Nestasia" },
-  { id: 4, name: "Snitch" },
+  { id: 1, name: "Jungle Merigold" },
+  { id: 2, name: "Wakatic Clothing" },
+  { id: 3, name: "Stuffieland" },
+  { id: 4, name: "Hestia" },
   { id: 5, name: "Salty Accessories" },
   { id: 6, name: "Flooret Commercial" },
-  { id: 7, name: "Shumee" },
   { id: 8, name: "Flooret" },
   { id: 9, name: "The Skin Spot" },
 ];
