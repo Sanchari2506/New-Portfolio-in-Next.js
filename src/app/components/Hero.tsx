@@ -131,6 +131,17 @@ export function Hero() {
               I work with DTC brands to build scalable e-commerce experiences
               — from bespoke Liquid themes to full-stack Shopify apps.
             </p>
+            <p
+              className="mb-10 max-w-md"
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                fontSize: "1rem",
+                lineHeight: 1.75,
+                color: "#5e9eff",
+              }}
+            >
+              I help Shopify brands build faster stores, custom apps, and scalable commerce experiences that increase conversions and simplify operations.
+            </p>
 
             <div className="flex flex-wrap gap-4">
               <button
