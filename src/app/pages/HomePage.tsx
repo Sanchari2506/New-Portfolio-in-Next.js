@@ -3,6 +3,7 @@ import { useLocation } from "react-router";
 import { Nav } from "../components/Nav";
 import { Hero } from "../components/Hero";
 import { TrustedBrands } from "../components/TrustedBrands";
+import { Services } from "../components/Services";
 import { Skills } from "../components/Skills";
 import { Projects } from "../components/Projects";
 import { CaseStudies } from "../components/CaseStudies";
@@ -73,6 +74,7 @@ export function HomePage() {
       <main id="main-content">
         <Hero />
         <TrustedBrands />
+        <Services />
         <Skills />
         <Projects />
         <CaseStudies />

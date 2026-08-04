@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Download } from "lucide-react";
 import { GitHubIcon, LinkedInIcon } from "./icons/SocialIcons";
+
+const RESUME_URL = "/Sanchari-Rakshit-Resume.pdf";
 
 const roles = ["Shopify Developer", "Liquid Architect", "Theme Specialist", "App Developer"];
 
@@ -170,6 +172,30 @@ export function Hero() {
               >
                 GET IN TOUCH
               </button>
+              <a
+                href={RESUME_URL}
+                download="Sanchari-Rakshit-Resume.pdf"
+                style={{
+                  fontFamily: "'DM Mono', monospace",
+                  fontSize: "0.8rem",
+                  letterSpacing: "0.08em",
+                  background: "transparent",
+                  color: "#f0eeea",
+                  border: "1px solid rgba(255,255,255,0.15)",
+                  padding: "0.75rem 1.5rem",
+                  cursor: "pointer",
+                  borderRadius: "6px",
+                  transition: "border-color 0.2s",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  textDecoration: "none",
+                }}
+                onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.borderColor = "#95bf47")}
+                onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.15)")}
+              >
+                <Download size={14} aria-hidden="true" focusable="false" /> DOWNLOAD RESUME
+              </a>
             </div>
 
             <div className="flex items-center gap-5 mt-10">

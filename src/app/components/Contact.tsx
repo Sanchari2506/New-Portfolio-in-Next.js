@@ -1,10 +1,20 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Download, ExternalLink, FolderGit2 } from "lucide-react";
+import { GitHubIcon, LinkedInIcon } from "./icons/SocialIcons";
+
+const RESUME_URL = "/Sanchari-Rakshit-Resume.pdf";
 
 export function Contact() {
   const contactItems = [
     { icon: Mail, label: "EMAIL", value: "sanchari.shopify@gmail.com", href: "mailto:sanchari.shopify@gmail.com" },
     { icon: Phone, label: "PHONE", value: "+91 62903 98828", href: "tel:+916290398828" },
     { icon: MapPin, label: "LOCATION", value: "Kolkata, India — remote worldwide" },
+  ];
+
+  const evaluateLinks = [
+    { icon: Download, label: "Download Resume (PDF)", href: RESUME_URL, download: "Sanchari-Rakshit-Resume.pdf" },
+    { icon: LinkedInIcon, label: "View LinkedIn", href: "https://www.linkedin.com/in/sanchari-rakshit-524a82192" },
+    { icon: GitHubIcon, label: "GitHub", href: "https://github.com/sanchari2506" },
+    { icon: FolderGit2, label: "Portfolio Projects", href: "#projects" },
   ];
 
   return (
@@ -16,7 +26,7 @@ export function Contact() {
             className="mb-3"
             style={{ fontFamily: "'DM Mono', monospace", color: "#95bf47", fontSize: "0.75rem", letterSpacing: "0.14em" }}
           >
-            {"06 / CONTACT"}
+            {"07 / CONTACT"}
           </p>
           <h2
             style={{
@@ -76,37 +86,63 @@ export function Contact() {
                 </div>
               ))}
             </div>
+          </div>
 
-            {/* Services */}
-            <div style={{ background: "#141417", border: "1px solid rgba(255,255,255,0.06)", padding: "1.5rem" }}>
+          {/* Right — evaluate my experience */}
+          <div>
+            <div style={{ background: "#141417", border: "1px solid rgba(255,255,255,0.06)", padding: "1.75rem" }}>
               <p
-                style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.7rem", letterSpacing: "0.1em", color: "#7a7a85", marginBottom: "1rem" }}
+                className="mb-1"
+                style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "1rem", fontWeight: 700, color: "#f0eeea" }}
               >
-                SERVICES OFFERED
+                Prefer reviewing my experience first?
               </p>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              {[
-                "Custom Shopify Theme Development",
-                "Shopify App Development",
-                "Agentic Commerce",
-                "B2B",
-                "Shopify Migrations & Audits",
-                "Third-party Integrations",
-                "Checkout Extension Development",
-              ].map((s) => (
-                <li
-                  key={s}
-                  className="flex items-center gap-2 py-2"
-                  style={{ borderBottom: "1px solid rgba(255,255,255,0.04)" }}
-                >
-                  <div aria-hidden="true" style={{ width: "5px", height: "5px", background: "#95bf47", flexShrink: 0 }} />
-                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.85rem", color: "#f0eeea" }}>{s}</span>
-                </li>
-              ))}
-              </ul>
+              <p
+                className="mb-5"
+                style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.85rem", color: "#7a7a85", lineHeight: 1.6 }}
+              >
+                Here are a few ways to evaluate my work before reaching out.
+              </p>
+
+              <div className="flex flex-col gap-3">
+                {evaluateLinks.map(({ icon: Icon, label, href, download }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    download={download}
+                    target={href.startsWith("#") ? undefined : "_blank"}
+                    rel={href.startsWith("#") ? undefined : "noopener noreferrer"}
+                    className="flex items-center justify-between"
+                    style={{
+                      fontFamily: "'DM Mono', monospace",
+                      fontSize: "0.78rem",
+                      letterSpacing: "0.04em",
+                      color: "#f0eeea",
+                      textDecoration: "none",
+                      padding: "0.75rem 1rem",
+                      background: "#0d0d0f",
+                      border: "1px solid rgba(255,255,255,0.06)",
+                      transition: "border-color 0.2s, color 0.2s",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.borderColor = "#95bf47";
+                      e.currentTarget.style.color = "#95bf47";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.borderColor = "rgba(255,255,255,0.06)";
+                      e.currentTarget.style.color = "#f0eeea";
+                    }}
+                  >
+                    <span className="flex items-center gap-3">
+                      <Icon size={15} aria-hidden="true" focusable="false" />
+                      {label}
+                    </span>
+                    <ExternalLink size={12} aria-hidden="true" focusable="false" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
-          
         </div>
       </div>
     </section>

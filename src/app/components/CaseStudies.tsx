@@ -57,7 +57,7 @@ export function CaseStudies() {
             className="mb-3"
             style={{ fontFamily: "'DM Mono', monospace", color: "#95bf47", fontSize: "0.75rem", letterSpacing: "0.14em" }}
           >
-            {"04 / CASE STUDIES"}
+            {"05 / CASE STUDIES"}
           </p>
           <h2
             style={{

@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { Menu, X } from "lucide-react";
 
-const sectionLinks = ["About", "Skills", "Projects", "Case Studies", "Experience", "Contact"];
+const sectionLinks = ["About", "Services", "Skills", "Projects", "Case Studies", "Experience", "Contact"];
+const RESUME_URL = "/Sanchari-Rakshit-Resume.pdf";
 
 export function Nav() {
   const [open, setOpen] = useState(false);
@@ -115,6 +116,18 @@ export function Nav() {
               BLOGS
             </Link>
           </li>
+          <li>
+            <a
+              href={RESUME_URL}
+              download="Sanchari-Rakshit-Resume.pdf"
+              className="transition-colors duration-200"
+              style={navButtonStyle("Resume")}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#f0eeea")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#7a7a85")}
+            >
+              RESUME
+            </a>
+          </li>
         </ul>
 
         <button
@@ -168,6 +181,20 @@ export function Nav() {
           >
             BLOG
           </Link>
+          <a
+            href={RESUME_URL}
+            download="Sanchari-Rakshit-Resume.pdf"
+            onClick={() => setOpen(false)}
+            style={{
+              fontFamily: "'DM Mono', monospace",
+              fontSize: "0.85rem",
+              letterSpacing: "0.06em",
+              color: "#f0eeea",
+              textDecoration: "none",
+            }}
+          >
+            RESUME
+          </a>
         </div>
       )}
     </nav>

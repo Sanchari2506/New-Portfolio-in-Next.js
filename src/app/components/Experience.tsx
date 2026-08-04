@@ -87,7 +87,7 @@ export function Experience() {
             className="mb-3"
             style={{ fontFamily: "'DM Mono', monospace", color: "#95bf47", fontSize: "0.75rem", letterSpacing: "0.14em" }}
           >
-            {"05 / EXPERIENCE"}
+            {"06 / EXPERIENCE"}
           </p>
           <h2
             style={{

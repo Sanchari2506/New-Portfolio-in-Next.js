@@ -69,7 +69,7 @@ export function Skills() {
             className="mb-3"
             style={{ fontFamily: "'DM Mono', monospace", color: "#95bf47", fontSize: "0.75rem", letterSpacing: "0.14em" }}
           >
-            {"02 / SKILLS"}
+            {"03 / SKILLS"}
           </p>
           <h2
             style={{
