@@ -5,9 +5,12 @@ import { Hero } from "../components/Hero";
 import { TrustedBrands } from "../components/TrustedBrands";
 import { Services } from "../components/Services";
 import { Skills } from "../components/Skills";
+import { FeaturedTech } from "../components/FeaturedTech";
 import { Projects } from "../components/Projects";
 import { CaseStudies } from "../components/CaseStudies";
 import { Experience } from "../components/Experience";
+import { WorkProcess } from "../components/WorkProcess";
+import { WhyHireMe } from "../components/WhyHireMe";
 import { Contact } from "../components/Contact";
 import { Footer } from "../components/Footer";
 import { Seo, defaultSeo } from "../components/Seo";
@@ -76,9 +79,12 @@ export function HomePage() {
         <TrustedBrands />
         <Services />
         <Skills />
+        <FeaturedTech />
         <Projects />
         <CaseStudies />
         <Experience />
+        <WorkProcess />
+        <WhyHireMe />
         <Contact />
       </main>
       <Footer />
