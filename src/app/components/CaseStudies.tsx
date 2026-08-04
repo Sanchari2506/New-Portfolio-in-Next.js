@@ -2,18 +2,9 @@ import { useState } from "react";
 import { CheckCircle } from "lucide-react";
 
 const caseStudies = [
+
   {
     id: 1,
-    brand: "Clothing Brand | Shopify Plus",
-    categories: ["Checkout"],
-    useCase:
-      "Hide/show payment methods according to the customer's tag.",
-    implementation:
-      "Built using Shopify Payment Functions inside a custom app. Customer tags and the payment methods to be shown are configured in the app's admin page and stored in the app's metafields. If the customer is not logged in, they're redirected to the login page. If the customer has no tag, Cash on Delivery is hidden — reducing fake COD orders.",
-    benefits: ["RTO optimized", "More prepaid orders"],
-  },
-  {
-    id: 2,
     brand: "Flooret Commercial",
     categories: ["Checkout", "B2B"],
     useCase:
