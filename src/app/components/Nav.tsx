@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { Menu, X } from "lucide-react";
 
-const sectionLinks = ["About", "Skills", "Projects", "Experience", "Contact"];
+const sectionLinks = ["About", "Skills", "Projects", "Case Studies", "Experience", "Contact"];
 
 export function Nav() {
   const [open, setOpen] = useState(false);
@@ -27,13 +27,14 @@ export function Nav() {
   const scrollToSection = (id: string) => {
     setOpen(false);
     setActive(id);
+    const slug = id.toLowerCase().replace(/\s+/g, "-");
 
     if (location.pathname !== "/") {
-      navigate(`/#${id.toLowerCase()}`);
+      navigate(`/#${slug}`);
       return;
     }
 
-    document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById(slug)?.scrollIntoView({ behavior: "smooth" });
   };
 
   const navButtonStyle = (label: string) => ({

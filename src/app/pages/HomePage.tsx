@@ -5,6 +5,7 @@ import { Hero } from "../components/Hero";
 import { TrustedBrands } from "../components/TrustedBrands";
 import { Skills } from "../components/Skills";
 import { Projects } from "../components/Projects";
+import { CaseStudies } from "../components/CaseStudies";
 import { Experience } from "../components/Experience";
 import { Contact } from "../components/Contact";
 import { Footer } from "../components/Footer";
@@ -74,6 +75,7 @@ export function HomePage() {
         <TrustedBrands />
         <Skills />
         <Projects />
+        <CaseStudies />
         <Experience />
         <Contact />
       </main>
