@@ -15,33 +15,9 @@ const projects = [
     liveUrl: "https://salty.co.in/"
   },
   {
-    id: 2,
-    tag: "SHOPIFY APP",
-    title: "Glow Videos - Shoppable Video App",
-    description:
-      "Built a Shopify app that enables merchants to showcase shoppable videos across product pages, collections, and homepages. Developed the merchant dashboard using Polaris and React, integrated Shopify APIs, video management features, analytics tracking, and seamless product tagging for higher engagement and conversions.",
-    image: "https://cdn.shopify.com/s/files/1/0719/1937/0434/files/glow-videos.png?v=1782059947",
-    tech: ["React", "Polaris", "GraphQL", "Shopify Functions", "Prisma"],
-    metrics: ["120+ merchants", "$400K GMV/mo", "4.8★ app store"],
-    color: "#5e9eff",
-    liveUrl: "https://apps.shopify.com/glow-videos"
-  },
-  {
-    id: 3,
-    tag: "SHOPIFY APP",
-    title: "Boost My Cart - Shopify App",
-    description:
-      "Developed a Shopify cart optimization app focused on increasing AOV through cart upsells, free gift campaigns, shipping protection, cart goals, and promotional offers. Built embedded admin experiences with Polaris and integrated Shopify APIs for real-time cart interactions.",
-    image: "https://cdn.shopify.com/s/files/1/0719/1937/0434/files/boost-my-cart.png?v=1782059804",
-    tech: ["React", "Polaris", "GraphQL", "Shopify Functions", "Prisma"],
-    metrics: ["120+ merchants", "$400K GMV/mo", "4.8★ app store"],
-    color: "#5e9eff",
-    liveUrl: "https://apps.shopify.com/glow-videos"
-  },
-  {
     id: 4,
     tag: "CHECKOUT EXTENSION",
-    title: "Custom Fields at Checkout",
+    title: "Flooret Commercial",
     description:
       "Built Shopify Checkout UI Extensions for Shopify Plus merchants, enabling custom checkout fields, order personalization, delivery instructions, and additional customer inputs. Integrated data capture directly into checkout while maintaining a seamless user experience.",
     image: "https://cdn.shopify.com/s/files/1/0719/1937/0434/files/flooretcommercial.png?v=1782061029",
@@ -61,18 +37,6 @@ const projects = [
     metrics: ["100 Lighthouse", "+29% sessions", "4 locales"],
     color: "#c383fb",
     liveUrl: "https://junglemarigold.com/"
-  },
-  {
-    id: 6,
-    tag: "SHOPIFY APP",
-    title: "Shopify Public Apps",
-    description:
-      "Designed and developed multiple Shopify public apps serving merchants across different use cases, including video commerce, cart optimization, checkout customization, and customer engagement. Built scalable architectures using Shopify APIs, Polaris, React, Node.js, and GraphQL.",
-    image: "https://cdn.shopify.com/s/files/1/0719/1937/0434/files/other-apps.png?v=1782059804",
-    tech: ["Node.js", "Redis", "PostgreSQL", "Shopify Webhooks", "NetSuite"],
-    metrics: ["10K+ orders/day", "99.99% uptime", "< 500ms sync"],
-    color: "#5e9eff",
-    liveUrl: "#",
   },
   {
     id: 7,
