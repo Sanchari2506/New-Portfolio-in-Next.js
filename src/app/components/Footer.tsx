@@ -13,7 +13,7 @@ export function Footer() {
         <span
           style={{ fontFamily: "'DM Mono', monospace", color: "#3a3a42", fontSize: "0.75rem", letterSpacing: "0.06em" }}
         >
-          {"// sanchari.shopify — shopify developer · Kolkata, India · 2020"}
+          {"// sanchari.shopify — shopify developer · Kolkata, India · 2026"}
         </span>
 
         <div className="flex items-center gap-5">
