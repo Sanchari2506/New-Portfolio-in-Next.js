@@ -4,49 +4,49 @@ const categories = [
   {
     label: "Shopify Core",
     skills: [
-      { name: "Liquid Templating", level: 98 },
-      { name: "Shopify CLI & Theme Kit", level: 95 },
-      { name: "Online Store 2.0", level: 96 },
-      { name: "Metafields & Metaobjects", level: 92 },
-      { name: "Shopify Checkout & Other Extensions", level: 88 },
-      { name: "Shopify Functions", level: 80 },
-      { name: "Shopify B2B", level: 85 },
-      { name: "Shopify Markets", level: 80 },
-      { name: "Shopify Flow & Automations", level: 88 },
-      { name: "Shopify Admin", level: 90 },
+      { name: "Liquid Templating", desc: "Building custom, high-performance Shopify themes from scratch." },
+      { name: "Shopify CLI & Theme Kit", desc: "Streamlining theme development with local dev servers and hot reload." },
+      { name: "Online Store 2.0", desc: "Building modular, section-based templates with JSON layouts." },
+      { name: "Metafields & Metaobjects", desc: "Modeling custom structured data across products, pages, and themes." },
+      { name: "Shopify Checkout & Other Extensions", desc: "Extending checkout and post-purchase flows with UI extensions." },
+      { name: "Shopify Functions", desc: "Writing custom discount, shipping, and payment logic at checkout." },
+      { name: "Shopify B2B", desc: "Configuring wholesale storefronts with company accounts and pricing." },
+      { name: "Shopify Markets", desc: "Setting up multi-currency, multi-region storefronts for global sales." },
+      { name: "Shopify Flow & Automations", desc: "Automating store operations with triggers, conditions, and actions." },
+      { name: "Shopify Admin", desc: "Configuring stores, apps, and settings across the merchant admin." },
     ],
   },
   {
     label: "App Development",
     skills: [
-      { name: "Shopify App Bridge", level: 90 },
-      { name: "Polaris Design System", level: 93 },
-      { name: "GraphQL Admin API", level: 89 },
-      { name: "REST Storefront API", level: 91 },
-      { name: "Webhooks & Event Handling", level: 87 },
-      { name: "OAuth & Session Tokens", level: 85 },
+      { name: "Shopify App Bridge", desc: "Embedding apps seamlessly into the Shopify admin experience." },
+      { name: "Polaris Design System", desc: "Crafting consistent, native-feeling admin UIs with Polaris components." },
+      { name: "GraphQL Admin API", desc: "Querying and mutating store data through Shopify's Admin API." },
+      { name: "REST Storefront API", desc: "Powering custom storefront experiences with REST endpoints." },
+      { name: "Webhooks & Event Handling", desc: "Reacting to store events in real time with reliable webhook handlers." },
+      { name: "OAuth & Session Tokens", desc: "Securing embedded apps with OAuth flows and session token auth." },
     ],
   },
   {
     label: "Frontend",
     skills: [
-      { name: "React / Next.js", level: 88 },
-      { name: "TypeScript", level: 84 },
-      { name: "Tailwind CSS", level: 92 },
-      { name: "SCSS / CSS Architecture", level: 90 },
-      { name: "Performance Optimization", level: 86 },
-      { name: "Accessibility (WCAG)", level: 80 },
+      { name: "React / Next.js", desc: "Building fast, SEO-friendly web apps with modern React patterns." },
+      { name: "TypeScript", desc: "Writing type-safe, maintainable code across large codebases." },
+      { name: "Tailwind CSS", desc: "Rapidly building responsive, utility-first UI layouts." },
+      { name: "SCSS / CSS Architecture", desc: "Structuring scalable, maintainable stylesheets for large projects." },
+      { name: "Performance Optimization", desc: "Improving load times, Core Web Vitals, and rendering efficiency." },
+      { name: "Accessibility (WCAG)", desc: "Designing inclusive interfaces that meet WCAG accessibility standards." },
     ],
   },
   {
     label: "Backend & Tools",
     skills: [
-      { name: "Node.js / Express", level: 82 },
-      { name: "Prisma & PostgreSQL", level: 78 },
-      { name: "Redis & Caching", level: 75 },
-      { name: "Git & CI/CD", level: 88 },
-      { name: "AWS / Vercel", level: 80 },
-      { name: "AI Automations", level: 70 },
+      { name: "Node.js / Express", desc: "Building lightweight APIs and backend services for web apps." },
+      { name: "Prisma & PostgreSQL", desc: "Modeling and querying relational data with type-safe ORM tooling." },
+      { name: "Redis & Caching", desc: "Speeding up applications with in-memory caching strategies." },
+      { name: "Git & CI/CD", desc: "Managing version control and automating build and deploy pipelines." },
+      { name: "AWS / Vercel", desc: "Deploying and scaling applications on modern cloud platforms." },
+      { name: "AI Automations", desc: "Integrating AI-driven workflows to automate repetitive tasks." },
     ],
   },
 ];
@@ -120,33 +120,19 @@ export function Skills() {
           className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14"
         >
           {categories[activeTab].skills.map((skill) => (
-            <div key={skill.name}>
-              <div className="flex justify-between mb-2">
-                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.9rem", color: "#f0eeea" }}>
-                  {skill.name}
-                </span>
-                <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.75rem", color: "#95bf47" }}>
-                  {skill.level}%
-                </span>
-              </div>
-              <div
-                role="progressbar"
-                aria-label={`${skill.name} proficiency`}
-                aria-valuemin={0}
-                aria-valuemax={100}
-                aria-valuenow={skill.level}
-                style={{ height: "3px", background: "rgba(255,255,255,0.06)", position: "relative" }}
-              >
-                <div
-                  aria-hidden="true"
-                  style={{
-                    height: "100%",
-                    width: `${skill.level}%`,
-                    background: "linear-gradient(90deg, #95bf47, #c8e87a)",
-                    transition: "width 0.8s ease",
-                  }}
-                />
-              </div>
+            <div
+              key={skill.name}
+              style={{
+                borderLeft: "2px solid #95bf47",
+                paddingLeft: "1rem",
+              }}
+            >
+              <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.9rem", fontWeight: 600, color: "#f0eeea", marginBottom: "0.35rem" }}>
+                {skill.name}
+              </p>
+              <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.82rem", color: "#7a7a85", lineHeight: 1.5 }}>
+                {skill.desc}
+              </p>
             </div>
           ))}
         </div>
