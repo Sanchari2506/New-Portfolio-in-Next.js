@@ -114,6 +114,15 @@ const projects = [
 
 const filters = ["All", "SHOPIFY THEME REVAMP", "SHOPIFY APP", "CHECKOUT EXTENSION", "INTEGRATION"];
 
+const brandCategories = [
+  "Apparel & Fashion", "Footwear", "Jewellery", "Kids Toys",
+  "Baby & Maternity", "Furniture", "Home Decor", "Home Fragrance & Candles", "Makeup & Cosmetics",
+  "Skin Care", "Perfume & Fragrance", "Hair Care", "Health & Wellness", "Supplements & Nutrition",
+  "Food & Beverage", "Pet Supplies", "Sports & Fitness", "Outdoor & Camping", "Electronics & Gadgets",
+  "Watches", "Bags & Accessories", "Eyewear", "Luggage & Travel", "Art & Home Goods",
+  "Books & Stationery", "Automotive Accessories",
+];
+
 export function Projects() {
   const [filter, setFilter] = useState("All");
   const [hovered, setHovered] = useState<number | null>(null);
@@ -334,6 +343,44 @@ export function Projects() {
               </div>
             </article>
           ))}
+        </div>
+
+        {/* Brand categories */}
+        <div className="mt-14">
+          <p
+            className="mb-4"
+            style={{ fontFamily: "'DM Mono', monospace", color: "#95bf47", fontSize: "0.72rem", letterSpacing: "0.1em" }}
+          >
+            SHOPIFY BRANDS I'VE WORKED WITH ACROSS
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {brandCategories.map((cat) => (
+              <span
+                key={cat}
+                style={{
+                  fontFamily: "'DM Mono', monospace",
+                  fontSize: "0.72rem",
+                  padding: "0.3rem 0.75rem",
+                  background: "#141417",
+                  border: "1px solid rgba(255,255,255,0.06)",
+                  color: "#7a7a85",
+                  letterSpacing: "0.06em",
+                  cursor: "default",
+                  transition: "all 0.2s",
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLElement).style.borderColor = "#95bf47";
+                  (e.currentTarget as HTMLElement).style.color = "#95bf47";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.06)";
+                  (e.currentTarget as HTMLElement).style.color = "#7a7a85";
+                }}
+              >
+                {cat}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>
