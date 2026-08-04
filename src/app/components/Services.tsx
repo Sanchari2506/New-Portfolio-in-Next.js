@@ -242,9 +242,9 @@ export function Services() {
           <div>
             <p
               className="mb-4 flex items-center gap-2"
-              style={{ fontFamily: "'DM Mono', monospace", color: "#7a7a85", fontSize: "0.72rem", letterSpacing: "0.1em" }}
+              style={{ fontFamily: "'DM Mono', monospace", color: "#5e9eff", fontSize: "0.72rem", letterSpacing: "0.1em" }}
             >
-              <Users size={14} style={{ color: "#95bf47" }} aria-hidden="true" focusable="false" />
+              <Users size={14} style={{ color: "#5e9eff" }} aria-hidden="true" focusable="false" />
               WHO I WORK WITH
             </p>
             <ul className="flex flex-col gap-3">
@@ -262,9 +262,9 @@ export function Services() {
           <div>
             <p
               className="mb-4 flex items-center gap-2"
-              style={{ fontFamily: "'DM Mono', monospace", color: "#7a7a85", fontSize: "0.72rem", letterSpacing: "0.1em" }}
+              style={{ fontFamily: "'DM Mono', monospace", color: "#b47fe0", fontSize: "0.72rem", letterSpacing: "0.1em" }}
             >
-              <Briefcase size={14} style={{ color: "#95bf47" }} aria-hidden="true" focusable="false" />
+              <Briefcase size={14} style={{ color: "#b47fe0" }} aria-hidden="true" focusable="false" />
               TYPICAL ENGAGEMENTS
             </p>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3">
