@@ -26,7 +26,7 @@ export function Contact() {
             className="mb-3"
             style={{ fontFamily: "'DM Mono', monospace", color: "#95bf47", fontSize: "0.75rem", letterSpacing: "0.14em" }}
           >
-            {"11 / CONTACT"}
+            {"09 / CONTACT"}
           </p>
           <h2
             style={{

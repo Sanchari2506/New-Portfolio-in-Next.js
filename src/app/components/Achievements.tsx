@@ -23,7 +23,7 @@ export function Achievements() {
             className="mb-3"
             style={{ fontFamily: "'DM Mono', monospace", color: "#95bf47", fontSize: "0.75rem", letterSpacing: "0.14em" }}
           >
-            {"08 / ACHIEVEMENTS"}
+            {"07 / ACHIEVEMENTS"}
           </p>
           <h2
             className="mb-4"

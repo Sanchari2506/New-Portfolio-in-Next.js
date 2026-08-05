@@ -103,7 +103,7 @@ export function Projects() {
               className="mb-3"
               style={{ fontFamily: "'DM Mono', monospace", color: "#95bf47", fontSize: "0.75rem", letterSpacing: "0.14em" }}
             >
-              {"05 / PROJECTS"}
+              {"04 / PROJECTS"}
             </p>
             <h2
               style={{
