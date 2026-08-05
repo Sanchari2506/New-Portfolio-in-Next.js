@@ -67,7 +67,7 @@ export function WorkProcess() {
             className="mb-3"
             style={{ fontFamily: "'DM Mono', monospace", color: "#95bf47", fontSize: "0.75rem", letterSpacing: "0.14em" }}
           >
-            {"08 / WORK PROCESS"}
+            {"09 / WORK PROCESS"}
           </p>
           <h2
             className="mb-4"

@@ -9,6 +9,7 @@ import { FeaturedTech } from "../components/FeaturedTech";
 import { Projects } from "../components/Projects";
 import { CaseStudies } from "../components/CaseStudies";
 import { Experience } from "../components/Experience";
+import { Achievements } from "../components/Achievements";
 import { WorkProcess } from "../components/WorkProcess";
 import { WhyHireMe } from "../components/WhyHireMe";
 import { Contact } from "../components/Contact";
@@ -83,6 +84,7 @@ export function HomePage() {
         <Projects />
         <CaseStudies />
         <Experience />
+        <Achievements />
         <WorkProcess />
         <WhyHireMe />
         <Contact />

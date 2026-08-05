@@ -37,7 +37,7 @@ export function WhyHireMe() {
             className="mb-3"
             style={{ fontFamily: "'DM Mono', monospace", color: "#95bf47", fontSize: "0.75rem", letterSpacing: "0.14em" }}
           >
-            {"09 / WHY HIRE ME"}
+            {"10 / WHY HIRE ME"}
           </p>
           <h2
             className="mb-4"

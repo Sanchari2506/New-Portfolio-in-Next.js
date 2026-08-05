@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { Menu, X } from "lucide-react";
 
-const sectionLinks = ["About", "Services", "Skills", "Projects", "Case Studies", "Experience", "Process", "Contact"];
+const sectionLinks = ["About", "Services", "Skills", "Projects", "Case Studies", "Experience", "Achievements", "Process", "Contact"];
 const RESUME_URL = "/Sanchari-Rakshit-Resume.pdf";
 
 export function Nav() {
