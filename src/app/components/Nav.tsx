@@ -116,7 +116,7 @@ export function Nav() {
               BLOGS
             </Link>
           </li>
-          <li>
+          {/* <li>
             <a
               href={RESUME_URL}
               download="Sanchari-Rakshit-Resume.pdf"
@@ -127,7 +127,7 @@ export function Nav() {
             >
               RESUME
             </a>
-          </li>
+          </li> */}
         </ul>
 
         <button
