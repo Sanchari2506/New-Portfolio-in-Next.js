@@ -59,7 +59,7 @@ export function Nav() {
         borderBottom: scrolled || isBlog ? "1px solid rgba(255,255,255,0.06)" : "none",
       }}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col items-center justify-between">
         <Link
           to="/"
           className="select-none"
